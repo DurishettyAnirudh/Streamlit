@@ -1,6 +1,17 @@
 import streamlit as st
 import pandas as pd
 
+# This is the line that removes hamburger from the web page
+st.markdown("""
+<style>
+            write your css styling here and it should be applied in the webpage            
+</style>
+
+""", unsafe_allow_html=True)
+
+
+
+
 st.title("St.Title")
 st.header("Streamlit")
 st.subheader("Streamlit sub header")

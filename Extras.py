@@ -28,3 +28,29 @@ st.dataframe(table)
 st.image("photo.jpg", caption = "This is an image", width = 720)
 st.audio("Audio.m4a")
 st.video("Video.mp4")
+
+def checkfun():
+    print(st.session_state.first_checker)
+check = st.checkbox(label='Wind Speed', value = True, on_change = checkfun, key="first_checker")
+if check:
+    st.write("The checkbox is checked😘")
+def radiostatus():
+    print(st.session_state.radiosession)
+radio = st.radio("Which country do you live?", options = ("US", "UK", "India😘"), key = "radiosession", on_change = radiostatus)
+
+def buttonclick():
+    print("button clicked")
+btn = st.button("Click Me", on_click =buttonclick)
+
+
+
+def selected():
+    print(selection)
+selection = st.selectbox("what is your favourite car?", options = ("BMW", "Ferrari","Lamborgini"), on_change = selected)
+
+
+
+def multiselected():
+    print(multiselection)
+multiselection = st.multiselect("select few items", options=("cars", "planes", "Trains", "Machines"), on_change=multiselected)
+st.write(multiselection)
